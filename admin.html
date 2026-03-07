@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Barbeiro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="selecao.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Painel do Barbeiro</h1>
+        </header>
+        <section class="bloquear-horarios">
+            <h2 class="bloquear">Bloquear Horários</h2>
+            <form action="#" method="post" class="form">
+                <label for="data">Escolha a data:</label>
+                <input type="date" id="data" name="data" required>
+
+                <label for="horario">Escolha o horário</label>
+                <select name="horario" id="select-horario" required>
+                    <option value="">Selecione um horário</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                </select>
+
+                <button type="submit" class="btn-agendarB">Bloquear Horário</button>
+            </form>
+        </section>
+        <section>
+            <h2 class="bloquear">Horários Agendados</h2>
+            <div id="horarios-agendados">
+                <form action="#" method="post"><input type="date" name="horariosMarcados" id="marcados" placeholder="Selecione a data para ver os horários agendados" required></form>
+                <!-- Horários agendados serão exibidos aqui -->
+            </div>
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="bloquear.js"></script>
+</body>
+</html>

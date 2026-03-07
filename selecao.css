@@ -1,0 +1,116 @@
+
+/* Container principal que coloca os itens lado a lado */
+.servicos {
+  display: flex;
+  justify-content: center; /* Centraliza o grupo todo na tela */
+  gap: 20px;               /* Espaçamento entre os itens */
+  margin: 60px;
+  text-align: center;      /* Centraliza o H2 em relação à div pai */
+}
+
+
+/* Ajuste individual de cada bloco (Cabelo, Barba, etc) */
+.servicos > div {
+  display: flex;
+  flex-direction: column;  /* Empilha o H2 sobre a imagem */
+  align-items: center;     /* Garante que ambos fiquem centralizados */
+}
+
+/* Ajuste das imagens */
+img {
+  width: 100%;            /* Tamanho fixo ou use 100% do container */
+  height: auto;
+  border-radius: 70px;
+  padding: 20px;           /* Reduzi o padding para não "esmagar" a imagem */
+}
+
+.agendamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px
+}
+
+.agendamento form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#select-horario {
+    display: block !important; /* Força a exibição */
+    width: 250px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+input[type="date"], select {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 250px;
+}
+
+.btn-agendar {
+    background-color: #ffcc00; /* Cor de destaque */
+    color: #000;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-agendar:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Estilos para o painel do barbeiro */
+.bloquear-horarios{               /* Espaçamento entre os itens */
+  margin: 20px;
+  display: block;
+  margin-top: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    left: 50px;
+}
+.btn-agendarB{
+    background-color: #ffcc00; /* Cor de destaque */
+    margin-top: 20px;
+    color: #000;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-agendarB:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+.bloquear{
+    background-color: #ffcc00; /* Cor de destaque */
+    margin-top: 20px;
+    color: #000;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.bloquear:hover {
+    background-color: #e6b800;
+    transform: scale(1);
+}
+

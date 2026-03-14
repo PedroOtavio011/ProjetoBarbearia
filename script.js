@@ -72,7 +72,7 @@ formAgendamento.addEventListener('submit', async (e) => {
             nome_cliente: nome, 
             data: data, 
             horario: horario,
-            servico: servico // Agora está dinâmico!
+            servico: servico 
         }]);
 
     if (error) {

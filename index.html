@@ -3,27 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia</title>
+    <title>Serviços</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="servicos.css">
 </head>
 <body>
     <main>
         <header>
-            <h1>Barbearia</h1>
+            <h1>Serviços</h1>
+            <nav>
+                <h1><a href="login.html">PAINEL DO ADMINISTRADOR</a></h1>
+            </nav>
         </header>
-        <form action="#" method="get">
+        <section class="servicos">
+            <div class="cabelo">
+                <h2>Cabelo</h2>
+                <img src="imagens/cabelo.png" alt="imagem cabelo">
+                
+            </div>
+            <div class="barba">
+                <h2>Barba</h2>
+                <img src="imagens/barba.png" alt="imagem barba">
+            </div>
+            <div class="cabeloebarba">
+                <h2>Cabelo e Barba</h2>
+                <img src="imagens/cabeloebarba.png" alt="imagem cabelo e barba">
+            </div>
+            </section>
+            <section class="agendamento">
+                <h2>Agende seu horário</h2>
+                    <form id="form-agendamento">
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" id="nome-cliente" placeholder="Digite seu nome" required>
 
-        <label for="login">Login:</label>
-        <input type="text" name="login" id="login" placeholder="Login">
-        <label for="senha">Senha:</label>
-        <input type="password" name="senha" id="senha" placeholder="Senha">
-        <input type="button" value="Entrar" class="entrar">
-        </form>
-    </main>
-    <footer>
-        <p>Copyright © 2024 - Todos os direitos reservados.</p>
-    </footer>
+                    <label for="data">Escolha a data:</label>
+                    <input type="date" id="data" name="data" required>
 
+                    <label for="horario">Escolha o horário</label>
+                    <select name="horario" id="select-horario" required>
+                        <option value="">Selecione um horário</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+                    <label for="servico">Escolha o serviço:</label>
+                    <select name="servico" id="select-servico" required>
+                        <option value="">Selecione o serviço</option>
+                        <option value="Cabelo">Cabelo</option>
+                        <option value="Barba">Barba</option>
+                        <option value="Cabelo e Barba">Cabelo e Barba</option>
+                    </select>
+            
     
+    <button type="submit" class="btn-agendar">Agendar</button>
+</form>
+            </section>
+        
+        
+
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
 </body>
 </html>

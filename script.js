@@ -6,6 +6,9 @@ const supabaseClient = supabase.createClient(_supabaseUrl, _supabaseKey);
 const campoData = document.getElementById('data');
 const selectHorario = document.getElementById('select-horario');
 const formAgendamento = document.getElementById('form-agendamento');
+const enviarAgendamento = document.getElementsByClassName('btn-agendar')[0];
+const telefone = document.getElementById('telefone');
+
 
 // 1. FUNÇÃO PARA BUSCAR HORÁRIOS OCUPADOS
 async function atualizarHorariosDisponiveis() {
@@ -72,7 +75,8 @@ formAgendamento.addEventListener('submit', async (e) => {
             nome_cliente: nome, 
             data: data, 
             horario: horario,
-            servico: servico 
+            servico: servico,
+            telefone: telefone.value
         }]);
 
     if (error) {
@@ -82,6 +86,10 @@ formAgendamento.addEventListener('submit', async (e) => {
         formAgendamento.reset(); 
         atualizarHorariosDisponiveis(); 
     }
+    const mensagem = `Olá, gostaria de agendar um horário para ${servico} no dia ${data} às ${horario}. Meu nome é ${nome}.`;
+    const numeroWhatsApp = '5535997741273';
+    const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+    window.open(linkWhatsApp, '_blank');
 });
 
     if (error) {
@@ -91,4 +99,5 @@ formAgendamento.addEventListener('submit', async (e) => {
         formAgendamento.reset(); // Limpa o formulário
         atualizarHorariosDisponiveis(); // Atualiza a lista de horários
     }
+
 atualizarHorariosDisponiveis();

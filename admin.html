@@ -39,13 +39,24 @@
         <section>
             <h2 class="bloquear">Horários Agendados</h2>
             <div id="horarios-agendados">
-                <form action="#" method="post"><input type="date" name="horariosMarcados" id="marcados" placeholder="Selecione a data para ver os horários agendados" required></form>
+                <form action="#" method="post">
+                    <input type="date" name="horariosMarcados" id="marcados" placeholder="Selecione a data para ver os horários agendados" required></form>
                 <!-- Horários agendados serão exibidos aqui -->
             </div>
         </section>
-
+        <section>
+            <h2 class="bloquear">Cancelar Horários</h2>
+            <div id="horarios-bloqueados">
+                <form action="">
+                    <input type="date" id="data-cancelar" name="data-cancelar" required>
+                    <div id="lista-cancelar" style="margin: 15px 0;"></div>
+                    <button type="submit" class="btn-cancelar">Cancelar Horário</button>
+                </form>
+            </div>
+        </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="bloquear.js"></script>
+    <script src="cancelar.js"></script>
 </body>
 </html>

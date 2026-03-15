@@ -107,6 +107,7 @@ input[type="date"], select {
     gap: 15px;
     left: 50px;
 }
+
 .btn-agendarB{
     background-color: #ffcc00; /* Cor de destaque */
     margin-top: 20px;
@@ -138,6 +139,26 @@ input[type="date"], select {
     background-color: #e6b800;
     transform: scale(1);
 }
+.btn-cancelar{
+    background-color: #ffcc00; /* Cor de destaque */
+    margin-top: 20px;
+    color: #000;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-cancelar:hover {
+    background-color: #e6b800;
+    transform: scale(1);
+}
+
+#telefone{
+    width: 100%;
+}
+
 @media(max-width: 768px) {
     .servicos {
         flex-direction: column;
